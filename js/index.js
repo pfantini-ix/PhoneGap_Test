@@ -13,7 +13,9 @@ require(["events"], function(events) {
 	        document.addEventListener('deviceready', this.onDeviceReady, false);
 	        document.addEventListener("pause", this.onPause, false);
 			document.addEventListener("resume", this.onResume, false);
-			document.addEventListener("backbutton", this.onBackButton, false);			
+			document.addEventListener("backbutton", this.onBackButton, false);
+			document.addEventListener("menubutton", this.onMenuButton, false);
+			document.addEventListener("searchbutton", this.onSearchButton, false);			
 	    },
 	    
 	    onBackButton: function(){
@@ -22,6 +24,14 @@ require(["events"], function(events) {
 			    transition: 'slide',
 			    reverse: true 
 			});	    	
+	    },
+	    
+	    onSearchButton: function(){
+	    	alert("search");
+	    },
+	    
+	    onMenuButton: function(){
+	    	alert("menu");
 	    },
 	    
 	    onPause: function(){
