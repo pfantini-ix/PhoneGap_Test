@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Mis Pelis</title>
+		<meta name="author" content="Pablo Fantini" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<meta name="description" content="" />
+		
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+		
+		<script src="external/jquery/jquery-1.9.1.min.js"></script>
+		<script src="external/jquery/jquery.mobile-1.3.1.min.js"></script>
+		
+		<script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" src="barcodescanner.js"></script>
+		
+		<script data-main="config/misPelis" src="external/require/require.js"></script>
+	</head>
+
+	<body>
+		
+		<!-- Last home -->
+		<div data-role="page" id="home">
+
+			<div data-role="header">
+				<h1>Mis Peliculas</h1>
+			</div>
+
+			<div data-role="content">
+				<div class="app">
+					<div id="deviceready" class="blink">
+						<p class="event listening">
+							Connecting to devise
+						</p>
+						<p class="event received">
+							Device is Ready
+						</p>
+					</div>
+				</div>
+				<a href="#lastMovies" data-role="button" data-transition="pop">Ultimas peliculas</a>
+				<a href="#qrScan" data-role="button" data-transition="pop">QR Scan</a>
+			</div>
+
+			<div data-role="footer">
+				<h4>Page Footer</h4>
+			</div>
+			
+		</div>
+		
+		<!-- Last movies -->
+		<div data-role="page" data-add-back-btn="true" data-back-btn-text="home" id="lastMovies">
+			<div data-role="header">
+				<h1>Ultimas peliculas</h1>
+			</div>
+			<div data-role="content" id="lastMovies-content">
+				
+			</div>
+			<div data-role="footer">
+				<h4>Page Footer</h4>
+			</div>
+		</div>
+		
+		<!-- QR Scan -->
+		<div data-role="page" data-add-back-btn="true" data-back-btn-text="home" id="qrScan">
+			<div data-role="header">
+				<h1>QR Scan</h1>
+			</div>
+			<div data-role="content" id="lastMovies-content">
+				
+			</div>
+			<div data-role="footer">
+				<h4>Page Footer</h4>
+			</div>
+		</div>
+
+	</body>
+</html>
