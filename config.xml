@@ -51,8 +51,8 @@
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
     <gap:plugin name="BarcodeScanner" /> <!-- latest release -->
-    <gap:plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
-    <gap:plugin name="InAppBrowser" value="CDVInAppBrowser" />
+    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+    <plugin name="InAppBrowser" value="CDVInAppBrowser" />
 
     <!-- Define app icon for each platform. -->
     <icon src="res/icon/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" /> 
