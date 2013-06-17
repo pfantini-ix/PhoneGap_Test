@@ -9,7 +9,7 @@ require(["events"], function(events) {
 	        $("#expernalURL").click(function(){
 	        	console.log("hola");
 	        	$.mobile.showPageLoadingMsg();
-	        	var ref = window.open('http://192.168.1.103:9090', '_blank', 'location=yes');
+	        	var ref = window.open('http://192.168.1.103:9090', '_blank', 'location=no');
 	        	//var ref = window.open('http://www.paemfa.com.ar', '_self', 'location=no,toolbar=no,enableViewportScale=no');
 	        	ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
 		        ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
