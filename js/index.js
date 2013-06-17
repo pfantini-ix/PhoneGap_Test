@@ -47,6 +47,11 @@ require(["events"], function(events) {
 	    // function, we must explicity call 'app.receivedEvent(...);'
 	    onDeviceReady: function() {
 	        app.receivedEvent('deviceready');
+	        
+	        //Config button external
+	        $("#expernalURL").click(function(){
+	        	console.log("hola");
+	        });
 	    },
 	    // Update DOM on a Received Event
 	    receivedEvent: function(id) {
