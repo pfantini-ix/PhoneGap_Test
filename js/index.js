@@ -4,6 +4,18 @@ require(["events"], function(events) {
 	    // Application Constructor
 	    initialize: function() {
 	        this.bindEvents();
+	        
+	        //Config button external
+	        $("#expernalURL").click(function(){
+	        	console.log("hola");
+	        	$.mobile.showPageLoadingMsg();
+	        	var ref = window.open('http://192.168.1.103:9090', '_self', 'location=yes');
+	        	//var ref = window.open('http://www.paemfa.com.ar', '_self', 'location=no,toolbar=no,enableViewportScale=no');
+	        	ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+		        ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+		        ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+		        ref.addEventListener('exit', function(event) { alert(event.type); });
+	        });
 	    },
 	    // Bind Event Listeners
 	    //
@@ -47,18 +59,6 @@ require(["events"], function(events) {
 	    // function, we must explicity call 'app.receivedEvent(...);'
 	    onDeviceReady: function() {
 	        app.receivedEvent('deviceready');
-	        
-	        //Config button external
-	        $("#expernalURL").click(function(){
-	        	console.log("hola");
-	        	$.mobile.showPageLoadingMsg();
-	        	var ref = window.open('http://www.paemfa.com.ar', '_self', 'location=yes');
-	        	//var ref = window.open('http://www.paemfa.com.ar', '_self', 'location=no,toolbar=no,enableViewportScale=no');
-	        	ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
-		        ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
-		        ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
-		        ref.addEventListener('exit', function(event) { alert(event.type); });
-	        });
 	    },
 	    // Update DOM on a Received Event
 	    receivedEvent: function(id) {
