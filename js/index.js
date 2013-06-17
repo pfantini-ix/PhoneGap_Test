@@ -51,6 +51,7 @@ require(["events"], function(events) {
 	        //Config button external
 	        $("#expernalURL").click(function(){
 	        	console.log("hola");
+	        	$.mobile.showPageLoadingMsg();
 	        	var ref = window.open('http://www.paemfa.com.ar', '_self', 'location=yes');
 	        	//var ref = window.open('http://www.paemfa.com.ar', '_self', 'location=no,toolbar=no,enableViewportScale=no');
 	        	ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
