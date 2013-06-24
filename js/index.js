@@ -16,6 +16,22 @@ require(["events"], function(events) {
 		        ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
 		        ref.addEventListener('exit', function(event) { alert(event.type); });
 	        });
+	        
+	        
+	        //$(document).on("swiperight", function(event, ui) {
+			//	$("#mypanel").panel("open");
+			//	console.log("arrastro dedooooooooo")	
+			//});
+			
+			$(document).on("swipeleft", function(event, ui) {
+				console.log("arrastro izq");
+				$("#panelRight").panel("open", {display: 'reveal', position: 'right'} );
+			});
+			$(document).on("swiperight", function(event, ui) {
+				console.log("arrastro derecha");
+				$("#panelLeft").panel("open", {display: 'reveal', position: 'left'} );
+			});
+	        
 	    },
 	    // Bind Event Listeners
 	    //
