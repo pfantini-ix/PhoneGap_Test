@@ -22,8 +22,8 @@ define(["qrScan"], function (qrscan) {
 	}
 	
 	function captureToCanvas() {
-		flash = document.getElementById("embedflash");
-		//flash.ccCapture();
+		var flash = document.getElementById("embedflash");
+		flash.ccCapture();
 		qrcode.decode();
 	}
 	
