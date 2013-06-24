@@ -4,21 +4,23 @@ define(["qrScan"], function (qrscan) {
 		addEvent : function(){
 			$('#qrJS').unbind()
 	    	$("#qrJS").on( "pagebeforeshow", function( event ) { 
-	    		
-				console.log("load qr");
 				
 				 var callback = function(code){alert('the code was: ' + code);} 
-				 QRIfy('codeimg', callback);//will be connected on DOMContentLoaded
+				 qrcode.callback = callback;
 				
 				$('#btnQrJs').click(function(){	
 					
-					navigator.camera.getPicture( 
+					navigator.camera.getPicture(
 						function(imageData) {
 						    var image = document.getElementById('myImage');
     						image.src = "data:image/jpeg;base64," + imageData;
+    						qrcode.decode(imageData);
+    						
 						}, function(message) {
-						    alert("error camera")
-						});
+						    alert("error camera");
+						    
+						},
+						{ quality: 90 });
 				});
 			});
 		},
