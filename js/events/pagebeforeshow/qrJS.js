@@ -20,7 +20,9 @@ define(["qrScan"], function (qrscan) {
 						    alert("error camera");
 						    
 						},
-						{ quality: 90 });
+						{ quality: 90,
+						  destinationType: Camera.DestinationType.DATA_URL 
+						});
 				});
 			});
 		},

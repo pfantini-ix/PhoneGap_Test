@@ -53,6 +53,8 @@
     <gap:plugin name="BarcodeScanner" /> <!-- latest release -->
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
     <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    <plugin name="Camera" value="CDVCamera" />
 
     <!-- Define app icon for each platform. -->
     <icon src="res/icon/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" /> 
