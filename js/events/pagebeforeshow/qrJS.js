@@ -12,10 +12,10 @@ define(["qrScan"], function (qrscan) {
 					
 					navigator.camera.getPicture(
 						function(imageData) {
-						    var image = document.getElementById('myImage');
-    						image.src = "data:image/jpeg;base64," + imageData;
-    						qrcode.decode(imageData);
-    						
+						    //var image = document.getElementById('myImage');
+    						//image.src = "data:image/jpeg;base64," + imageData;
+    						//qrcode.decode(imageData);
+    						alert("camera ok");
 						}, function(message) {
 						    alert("error camera");
 						    
